@@ -33,13 +33,16 @@ public void afficherProduitsDisponibles(){
     }
 }
 
+// Entre un String et sort un Produit
 public Produit trouverProduitParNom(String nom){
     for (Produit p : produits) {
         if (p.getNom().equalsIgnoreCase(nom)) {
+// equalsIgnoreCase ignore les majuscules donc clavier trouve Clavier
+// equals serait trop strict et == comparerait les adresses memoire
              return p;     
         }
     }
-    return null;  
+    return null;  // Apres la boucle : aucun produit ne correspond
 }
 
 
