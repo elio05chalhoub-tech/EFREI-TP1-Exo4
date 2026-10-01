@@ -15,7 +15,7 @@ public class Client {
     
 public Client(int id, String nom, String email){
     
-    this.id=id;
+    this.id=id;// Meme structure que Produit : attributs prives constructeur getters setters
     this.nom=nom;
     this.email=email;
    
@@ -47,7 +47,7 @@ public void setEmail(String email){
     
 }
 
-
+// Le nom doit etre ecrit exactement pareil partout sinon erreur cannot find symbol
 public void afficherDetails(){
     System.out.println("Id : " + id + "\n Name : "+ nom + "\n Email : " + email );
 }
