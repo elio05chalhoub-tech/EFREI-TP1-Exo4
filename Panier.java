@@ -4,21 +4,23 @@
  */
 
 package gestionMagasin;
-import java.util.ArrayList;    
+import java.util.ArrayList;    // Obligatoire pour utiliser ArrayList
 /**
  *
  * @author HP
  */
 public class Panier {
     
+// ArrayList car on ne sait pas combien de produits a l avance
+// Les chevrons disent que la liste accepte uniquement des Produit
     private ArrayList<Produit> produits;
     
 public  Panier(){
-    produits=new ArrayList<>();
+    produits=new ArrayList<>();// Sans le new la liste vaut null et le programme plante au premier ajout
 }
 
 public void ajouterProduit(Produit produit){
-    produits.add(produit);
+    produits.add(produit);// add range le produit a la fin de la liste
     System.out.println(produit.getNom() + " a ete ajoute au panier");
 }
 
@@ -33,7 +35,7 @@ public void afficherPanier(){
             System.out.println("Le panier est vide");
             return;
         }
-    for (Produit p : produits){
+    for (Produit p : produits){// for each : pour chaque Produit p dans la liste produits
         p.afficherDetails();
     }
 }
@@ -47,7 +49,7 @@ public double calculerTotal() {
     return total;
 }
 
-public ArrayList<Produit> getProduits() {
+public ArrayList<Produit> getProduits() {// Getter utilise par la classe Commande pour recuperer les produits
     return produits;
 }
 }
