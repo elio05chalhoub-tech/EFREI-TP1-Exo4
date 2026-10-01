@@ -11,7 +11,7 @@ public class Commande {
     
     private int idCommande;
     private Client client;
-    private ArrayList<Produit> produitsCommandes;
+    private ArrayList<Produit> produitsCommandes;// Plusieurs produits donc une ArrayList
     private double total;
     
  public Commande(int idCommande, Client client, Panier panier) {
@@ -23,7 +23,8 @@ public class Commande {
 public void afficherDetailsCommande(){
     
     System.out.println("=== Commande numero " + idCommande + " ===");
-    client.afficherDetails();
+    client.afficherDetails();// Le client sait s afficher lui meme
+
     System.out.println("--- Produits commandes ---");
         for (Produit p : produitsCommandes) {
             p.afficherDetails();
